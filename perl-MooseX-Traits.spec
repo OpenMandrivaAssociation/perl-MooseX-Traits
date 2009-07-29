@@ -1,22 +1,23 @@
-%define module   MooseX-Traits
-%define version    0.06
-%define release    %mkrel 1
+%define upstream_name    MooseX-Traits
+%define upstream_version 0.06
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Automatically apply roles at object creation time
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/MooseX/%{module}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Moose)
 BuildRequires: perl(Moose::Role)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Test::use::ok)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Often you want to create components that can be added to a class
@@ -30,7 +31,7 @@ meant to initialize the applied roles' attributes can also be passed to the
 constructor.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,5 +52,3 @@ rm -rf %buildroot
 %doc README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-

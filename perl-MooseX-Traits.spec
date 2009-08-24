@@ -16,6 +16,8 @@ BuildRequires: perl(Moose::Role)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Test::use::ok)
+BuildRequires: perl(namespace::autoclean)
+
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 

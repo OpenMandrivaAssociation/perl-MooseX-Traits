@@ -1,9 +1,9 @@
 %define upstream_name    MooseX-Traits
-%define upstream_version 0.07
+%define upstream_version 0.08
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Automatically apply roles at object creation time
 License:    GPL+ or Artistic
@@ -52,6 +52,6 @@ rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-%doc README Changes
+%doc Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*

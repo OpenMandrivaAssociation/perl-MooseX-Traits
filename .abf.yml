@@ -1,2 +1,4 @@
+removed_sources:
+  MooseX-Traits-0.11.tar.gz: cef3bc95127ce80343069d6b477d2a2ba7915bb1
 sources:
-  "MooseX-Traits-0.11.tar.gz": cef3bc95127ce80343069d6b477d2a2ba7915bb1
+  MooseX-Traits-0.12.tar.gz: cb431d045d7240b142cc9aad98b1c70cbe0b04d7

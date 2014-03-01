@@ -1,9 +1,8 @@
-%define upstream_name    MooseX-Traits
-%define upstream_version 0.11
+%define upstream_name    MooseX-Traits%define upstream_version 0.12
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Automatically apply roles at object creation time
 License:	GPL+ or Artistic
@@ -97,4 +96,5 @@ make test
 
 * Sun Feb 22 2009 cpan2dist 0.03-1mdv
 - initial mdv release, generated with cpan2dist
+
 

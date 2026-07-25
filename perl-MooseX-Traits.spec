@@ -1,14 +1,15 @@
-%define upstream_name    MooseX-Traits%define upstream_version 0.12
+%define upstream_name    MooseX-Traits
+%define upstream_version 0.13
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Automatically apply roles at object creation time
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/moose/MooseX-Traits
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Traits-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel

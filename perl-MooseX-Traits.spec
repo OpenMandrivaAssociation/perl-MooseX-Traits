@@ -1,15 +1,13 @@
 %define upstream_name    MooseX-Traits
-%define upstream_version 0.13
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.13
+Release:	2
 
 Summary:	Automatically apply roles at object creation time
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/moose/MooseX-Traits
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Traits-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Traits-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -37,7 +35,7 @@ meant to initialize the applied roles' attributes can also be passed to the
 constructor.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -83,9 +81,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.60.0-1mdv2010.0
 + Revision: 404042
-- rebuild using %%perl_convert_version
-
-* Tue Jun 30 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.06-1mdv2010.0
+- rebuild using %0.13 Tue Jun 30 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.06-1mdv2010.0
 + Revision: 390838
 - update to new version 0.06
 
